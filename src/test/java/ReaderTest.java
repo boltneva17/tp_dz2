@@ -1,16 +1,13 @@
-import junit.framework.TestCase;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
-public class ReaderTest extends TestCase {
-
+public class ReaderTest{
     @Test
-    void minAndMax() {
+    public void minAndMax() {
         Random random = new Random();
         try {
             for (int i = 1; i <= 1000000; i *= 10) {
@@ -20,7 +17,7 @@ public class ReaderTest extends TestCase {
                     new FileWriter(path, false).close();
                 }
                 int[] expected = new int[2];
-                expected[0] = (int)- Math.pow(2, 32) + 1;
+                expected[0] = (int) -Math.pow(2, 32) + 1;
                 expected[1] = (int) Math.pow(2, 32) - 1;
                 FileWriter writer = new FileWriter(path);
                 StringBuilder builder = new StringBuilder();
@@ -41,7 +38,7 @@ public class ReaderTest extends TestCase {
                 int[] actual = new int[2];
                 actual[1] = reader._min();
                 actual[0] = reader._max();
-                Assertions.assertArrayEquals(expected, actual);
+                org.junit.Assert.assertArrayEquals(expected, actual);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -49,8 +46,9 @@ public class ReaderTest extends TestCase {
     }
 
 
+
     @Test
-    void sumAndMult() {
+    public void sumAndMult() {
         Random random = new Random();
         try {
             for (int i = 1; i <= 1000000; i *= 10) {
@@ -81,7 +79,7 @@ public class ReaderTest extends TestCase {
                 int[] actual = new int[2];
                 actual[1] = reader._mult();
                 actual[0] = reader._sum();
-                Assertions.assertArrayEquals(expected, actual);
+                org.junit.Assert.assertArrayEquals(expected, actual);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -89,7 +87,7 @@ public class ReaderTest extends TestCase {
     }
 
     @Test
-    void runTime() {
+    public void runTime() {
         Random random = new Random();
         try {
             for (Integer i = 1; i <= 1000000; i *= 10) {
@@ -125,7 +123,7 @@ public class ReaderTest extends TestCase {
         }
     }
     @Test
-    void myTest(){
+    public void myTest() {
         // проверяем, что среднее лежит между наибольшим и наименьшим значениями
         Random random = new Random();
         try {
@@ -135,7 +133,7 @@ public class ReaderTest extends TestCase {
                 if (!newFile.createNewFile()) {
                     new FileWriter(path, false).close();
                 }
-                int maxVal = (int)- Math.pow(2, 32) + 1;
+                int maxVal = (int) -Math.pow(2, 32) + 1;
                 int minVal = (int) Math.pow(2, 32) - 1;
                 FileWriter writer = new FileWriter(path);
                 StringBuilder builder = new StringBuilder();
@@ -154,7 +152,7 @@ public class ReaderTest extends TestCase {
                 writer.close();
                 Reader reader = new Reader(path);
                 int actual_sum = reader._sum();
-                Assertions.assertTrue(actual_sum / i >= minVal && actual_sum / i <= maxVal);
+                org.junit.Assert.assertTrue(actual_sum / i >= minVal && actual_sum / i <= maxVal);
             }
         } catch (IOException e) {
             e.printStackTrace();
