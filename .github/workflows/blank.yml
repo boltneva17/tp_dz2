@@ -18,7 +18,11 @@ jobs:
         with:
           java-version: '17' 
 
+      - name: Build with Maven
+        run: mvn clean install
+
       - name: Run tests
-        run: ReaderTest.java
+        run: mvn test
+
 
   
