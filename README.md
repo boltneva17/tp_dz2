@@ -18,4 +18,16 @@
 График времени работы программы(в милисекундах) в зависимости от количества чисел в файлах:
 ![alt text](https://github.com/boltneva17/tp_dz2/blob/main/chart.png "Logo Title Text 1")
 
+## Вторая часть ДЗ
+**Бэйдж с тестами**
 ![example workflow](https://github.com/boltneva17/tp_dz2/actions/workflows/blank.yml/badge.svg)
+
+Чтобы в **ручном режиме** запустить тесты надо:
+1. Перейти во вкладку *Actions*
+2. В панели слева тыкнуть на *CI*
+3. Появится надпись *This workflow has a workflow_dispatch event trigger*
+4. Выбрать *Run workflow*
+
+Или воспользуйтесь [ссылкой](https://github.com/boltneva17/tp_dz2/actions/workflows/blank.yml)
+
+   
