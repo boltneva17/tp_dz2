@@ -15,5 +15,7 @@
 2. В процессе заполнения файла числами считаем ожидаемое значение(сумму, произведение, минимум или максимум)
 3. Запускаем на готовом файле функции класса Reader
 
+График времени работы программы(в милисекундах) в зависимости от количества чисел в файлах:
+![alt text](https://github.com/boltneva17/tp_dz2/blob/main/chart.png "Logo Title Text 1")
 
 ![example workflow](https://github.com/boltneva17/tp_dz2/actions/workflows/blank.yml/badge.svg)
