@@ -22,7 +22,7 @@ jobs:
       - name: Run tests
         run: mvn test
       - name: Send Telegram message
-        run: bash send_telegram_message.sh
+        run: bash tests.sh
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
